@@ -1,0 +1,53 @@
+<div class="container-fluid">
+<div class="container">
+    <div class="text-center">
+        <h1>Predict Score</h1>
+    </div>
+    <div class="card">
+        <div class="card-header">
+            <h3>Predict App</h3>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Workout Panel</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="api_service_id">Upload File</label>
+                                        <input type="file" class="form-control" id="api_service_id"
+                                            (change)="showTable($event)">
+                                            
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-12 table-responsive mat-elavetion-z8">
+                    <table class="table table-bordered mat-elavetion-z8">
+                        <thead>
+                            <tr>
+                                <th *ngFor="let item of lines[0]; let i = index">{{item}}</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let item of linesR[0]; let i = index">
+                                <td *ngFor="let itemm of lines[0]; let j = index">{{item[j]}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- The respective credit goes to the <a href="https://therichpost.com/how-to-read-csv-file-in-angular-10/">The Richpost</a> -->
